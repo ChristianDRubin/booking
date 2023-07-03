@@ -52,7 +52,7 @@ const PropertyCard = ({
           <Text style={styles.viewPricesNight}>Precio por una noche y {adults} adultos</Text>
           <View style={styles.viewText2}>
             <Text style={styles.viewText3}>{property.oldPrice * adults}</Text>
-            <Text style={{ fontSize: 18 }}>Rs {property.newPrice * adults}</Text>
+            <Text style={{ fontSize: 18 }}>$ {property.newPrice * adults}</Text>
           </View>
 
           <View style={{ marginTop: 6 }}>
@@ -63,7 +63,7 @@ const PropertyCard = ({
           </View>
 
           <View style={styles.viewText4}>
-            <Text style={styles.viewText5}>Limited Time deal</Text>
+            <Text style={styles.viewText5}>Tiempo limite de acuerdo</Text>
           </View>
         </View>
       </Pressable>

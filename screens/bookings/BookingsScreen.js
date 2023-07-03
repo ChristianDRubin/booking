@@ -7,7 +7,8 @@ import { useNavigation } from '@react-navigation/native';
 import { useSelector } from 'react-redux';
 
 const BookingScreen = () => {
-  const bookings = useSelector((state) => state.bookings.booking);
+  const bookings = useSelector((state) => state.booking.booking);
+  console.log(bookings);
   const navigation = useNavigation();
 
   useLayoutEffect(() => {
@@ -29,8 +30,8 @@ const BookingScreen = () => {
   }, []);
   return (
     <SafeAreaView>
-          {bookings.length > 0 && bookings.map((item) => (
-        <Pressable style={styles.pressableHeader}>
+          {bookings.length > 0 && bookings.map((item,index) => (
+        <Pressable key={index} style={styles.pressableHeader}>
           <View>
             <Text style={styles.pressableHeaderName}>{item.name}</Text>
             <View style={styles.pressableTextViewItem}>

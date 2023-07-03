@@ -15,7 +15,7 @@ const ConfirmationScreen = () => {
   useLayoutEffect(() => {
     navigation.setOptions({
       headerShown: true,
-      title: "Confirmation",
+      title: "Confirmacion",
       headerTitleStyle: {
         fontSize: 20,
         fontWeight: "bold",
@@ -54,7 +54,7 @@ const ConfirmationScreen = () => {
             <Text style={styles.pressableViewTextConfirmation}>
               {route.params.name}
             </Text>
-            <View style={style.pressableViewTextConfirmation2}>
+            <View style={styles.pressableViewTextConfirmation2}>
               <MaterialIcons name="stars" size={24} color="green" />
               <Text>{route.params.rating}</Text>
               <View style={styles.pressableView2}>
@@ -63,9 +63,9 @@ const ConfirmationScreen = () => {
             </View>
           </View>
 
-          <View style={pressableViewTextTravelSustentable}>
+          <View style={styles.pressableViewTextTravelSustentable}>
             <Text style={styles.pressableTextTravelSustentable}>
-              Travel sustainable
+              Viaje sustentable
             </Text>
           </View>
         </View>
@@ -86,14 +86,14 @@ const ConfirmationScreen = () => {
           </View>
         </View>
         <View style={{ margin: 12 }}>
-          <Text style={styles.pressableTextCheckInOut}>Rooms and Guests</Text>
+          <Text style={styles.pressableTextCheckInOut}>Cuartos y huespedes</Text>
           <Text style={styles.pressableTextDates}>
-            {" "}{route.params.rooms} rooms {route.params.adults} adults{" "} {route.params.children} children
+            {" "}{route.params.rooms} cuartos {route.params.adults} adultos{" "} {route.params.children} niños
           </Text>
         </View>
 
         <Pressable onPress={confirmBooking} style={styles.ButtonConfirmation}>
-          <Text style={styles.ButtonTextConfirmation}>Book Now</Text>
+          <Text style={styles.ButtonTextConfirmation}>Confirmar</Text>
         </Pressable>
       </Pressable>
     </View>

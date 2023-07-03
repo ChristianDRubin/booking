@@ -11,11 +11,11 @@ import React, { useState } from "react";
 import { auth, db } from "../../constants/firebase";
 import { doc, setDoc } from "firebase/firestore";
 
-import AsyncStorage from "@react-native-async-storage/async-storage";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { styles } from "./styles";
 import { useNavigation } from "@react-navigation/native";
 
+// import AsyncStorage from "@react-native-async-storage/async-storage";
 const RegisterScreen = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -24,8 +24,8 @@ const RegisterScreen = () => {
   const register = () => {
     if (email === "" || password === "" || phone === "") {
       Alert.alert(
-        "Invalid Detials",
-        "Please enter all the credentials",
+        "Detalles invalidos",
+        "Por favor ingresa todas las credenciales",
         [
           {
             text: "Cancel",
@@ -53,8 +53,8 @@ const RegisterScreen = () => {
     <SafeAreaView style={styles.safeAreaViewRegister}>
       <KeyboardAvoidingView>
         <View style={styles.keyboardAvoidingViewRegister}>
-          <Text style={styles.textRegister}>Register</Text>
-          <Text style={styles.textRegisterAccount}>Create an Account</Text>
+          <Text style={styles.textRegister}>Registrar</Text>
+          <Text style={styles.textRegisterAccount}>Crear una cuenta</Text>
         </View>
 
         <View style={{ marginTop: 50 }}>
@@ -63,7 +63,7 @@ const RegisterScreen = () => {
             <TextInput
               value={email}
               onChangeText={(text) => setEmail(text)}
-              placeholder="enter your email id"
+              placeholder="Ingresa un correo"
               placeholderTextColor={"black"}
               style={styles.textInputRegister}/>
           </View>
@@ -80,23 +80,23 @@ const RegisterScreen = () => {
           </View>
 
           <View style={{ marginTop: 15 }}>
-            <Text style={styles.textfieldsRegister}>Phone</Text>
+            <Text style={styles.textfieldsRegister}>Telefono</Text>
 
             <TextInput
               value={phone}
               onChangeText={(text) => setPhone(text)}
-              placeholder="enter your Phone No"
+              placeholder="Ingresa un telefono"
               placeholderTextColor={"black"}
               style={styles.textInputRegister}/>
           </View>
         </View>
 
         <Pressable onPress={register} style={styles.pressableRegister}>
-          <Text style={styles.textRegisterButton}>Register</Text>
+          <Text style={styles.textRegisterButton}>Registrar</Text>
         </Pressable>
 
         <Pressable onPress={() => navigation.goBack()} style={{ marginTop: 20 }}>
-          <Text style={styles.textAllReadyAccount}>Already have an account? Sign-In</Text>
+          <Text style={styles.textAllReadyAccount}>Ya tienes una cuenta? Sign-In</Text>
         </Pressable>
       </KeyboardAvoidingView>
     </SafeAreaView>

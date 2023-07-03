@@ -16,7 +16,7 @@ const UserScreen = () => {
     useLayoutEffect(() => {
       navigation.setOptions({
         headerShown: true,
-        title: "User Details",
+        title: "Detalles de usuario",
         headerTitleStyle: {
           fontSize: 20,
           fontWeight: "bold",
@@ -68,7 +68,7 @@ const UserScreen = () => {
       <>
         <View style={{ padding: 20 }}>
           <View style={styles.viewInput}>
-            <Text>First Name</Text>
+            <Text>Nombre</Text>
             <TextInput
               value={firstName}
               onChangeText={(text) => setFirstName(text)}
@@ -77,7 +77,7 @@ const UserScreen = () => {
           </View>
 
           <View style={styles.viewInput}>
-            <Text>Last Name</Text>
+            <Text>Apellido</Text>
             <TextInput
               value={lastName}
               onChangeText={(text) => setLastName(text)}
@@ -95,7 +95,7 @@ const UserScreen = () => {
           </View>
 
           <View style={styles.viewInput}>
-            <Text>Phone no</Text>
+            <Text>Telefono</Text>
             <TextInput
               value={phoneNo}
               onChangeText={(text) => setPhoneNo(text)}
@@ -111,15 +111,15 @@ const UserScreen = () => {
                 {route.params.oldPrice * route.params.adults}
               </Text>
               <Text style={{ fontSize: 20 }}>
-                Rs {route.params.newPrice * route.params.adults}
+                $ {route.params.newPrice * route.params.adults}
               </Text>
             </View>
             <Text>
-              You Saved {route.params.oldPrice - route.params.newPrice} rupees
+              has ahorrado {route.params.oldPrice - route.params.newPrice} pesos
             </Text>
           </View>
           <Pressable onPress={finalStep} style={styles.textFinalSteps}>
-            <Text style={styles.textFinalStep}>Final Step</Text>
+            <Text style={styles.textFinalStep}>Último paso</Text>
           </Pressable>
         </Pressable>
       </>

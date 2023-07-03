@@ -9,7 +9,7 @@ import {
 import React, { useLayoutEffect } from "react";
 import { useNavigation, useRoute } from "@react-navigation/native";
 
-import Amenities from "../../components";
+import { Amenities } from "../../components";
 import { MaterialIcons } from "@expo/vector-icons";
 import { styles } from './styles';
 
@@ -41,8 +41,8 @@ const PropertyInfoScreen = () => {
       <>
         <SafeAreaView>
           <ScrollView>
-            <Pressable style={styles.pressableProperty}>{route.params.photos.slice(0, 5).map((photo) => (
-                <View style={{ margin: 6 }}>
+            <Pressable style={styles.pressableProperty}>{route.params.photos.slice(0, 5).map((photo, index) => (
+                <View key={index} style={{ margin: 6 }}>
                   <Image style={styles.imageStyles} source={{ uri: photo.image }}/>
                 </View>
               ))}
@@ -79,7 +79,7 @@ const PropertyInfoScreen = () => {
                 {route.params.oldPrice * route.params.adults}
               </Text>
               <Text style={{ fontSize: 20 }}>
-                Rs {route.params.newPrice * route.params.adults}
+                $ {route.params.newPrice * route.params.adults}
               </Text>
             </View>
             <View style={styles.textComodidades2}>

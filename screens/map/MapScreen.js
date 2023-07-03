@@ -29,8 +29,9 @@ const MapScreen = () => {
     <View>
       <MapView ref={mapView} style={{ width: "100%", height: "100%" }}>
         {route.params.searchResults.map((item) =>
-          item.properties.map((property) => (
+          item.properties.map((property,index) => (
             <Marker
+              key={index}
               title={property.name}
               coordinate={{
                 latitude: Number(property.latitude),

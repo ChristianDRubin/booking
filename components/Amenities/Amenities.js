@@ -6,23 +6,23 @@ const Amenities = () => {
   const services = [
     {
       id: "0",
-      name: "room service",
+      name: "Servicio al cuarto",
     },
     {
       id: "2",
-      name: "free wifi",
+      name: "Wifi",
     },
     {
       id: "3",
-      name: "Family rooms",
+      name: "Cuartos familiares",
     },
     {
       id: "4",
-      name: "Free Parking",
+      name: "Estacionamiento gratuito",
     },
     {
       id: "5",
-      name: "swimming pool",
+      name: "Pileta",
     },
     {
       id: "6",
@@ -30,13 +30,13 @@ const Amenities = () => {
     },
     {
       id: "7",
-      name: "Fitness center",
+      name: "Gimnasio",
     },
   ];
   return (
     <View style={{ padding: 10 }}>
       <Text style={{ fontSize: 17, fontWeight: "600" }}>
-        Most Popular Facilities
+        Hospedajes mas populares
       </Text>
       <View
         style={{ flexDirection: "row", alignItems: "center", flexWrap: "wrap" }}

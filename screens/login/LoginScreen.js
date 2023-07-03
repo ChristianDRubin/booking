@@ -77,7 +77,7 @@ const LoginScreen = () => {
         <KeyboardAvoidingView>
           <View style={styles.keyboardAvoidingViewLogin}>
             <Text style={styles.textSignIn}>Sign-In</Text>
-            <Text style={styles.textSignInAccount}>Sign-In to Your Account</Text>
+            <Text style={styles.textSignInAccount}>Sign-In a tu cuenta</Text>
           </View>
           <View style={{ marginTop: 50 }}>
             <View>
@@ -107,7 +107,7 @@ const LoginScreen = () => {
           </Pressable>
 
           <Pressable onPress={() => navigation.navigate("Register")} style={{ marginTop: 20 }}>
-            <Text style={styles.textLoginButton}>Don't have an account? Sign-up</Text>
+            <Text style={styles.textLoginButton}>No tienes cuenta? Sign-up</Text>
           </Pressable>
         </KeyboardAvoidingView>
       </SafeAreaView>

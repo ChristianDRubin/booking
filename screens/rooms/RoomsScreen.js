@@ -16,7 +16,7 @@ const RoomsScreen = () => {
   useLayoutEffect(() => {
     navigation.setOptions({
       headerShown: true,
-      title: "Available Rooms",
+      title: "Cuartos disponibles",
       headerTitleStyle: {
         fontSize: 20,
         fontWeight: "bold",
@@ -62,7 +62,7 @@ const RoomsScreen = () => {
               >
                 {route.params.oldPrice}
               </Text>
-              <Text style={{ fontSize: 18 }}>Rs{route.params.newPrice}</Text>
+              <Text style={{ fontSize: 18 }}>${route.params.newPrice}</Text>
             </View>
             <Amenities />
 

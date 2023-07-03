@@ -7,7 +7,7 @@ import { useNavigation } from '@react-navigation/native';
 import { useSelector } from 'react-redux';
 
 const BookingScreen = () => {
-  const bookings = useSelector((state) => state.booking.booking);
+  const bookings = useSelector((state) => state.booking.bookings);
   console.log(bookings);
   const navigation = useNavigation();
 
